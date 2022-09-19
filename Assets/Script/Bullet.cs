@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-
+    public float speed = 0.5f;
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * 0.01f);
+        transform.Translate(Vector3.forward * speed);
     }
 
     void OnCollisionEnter(Collision collision)
