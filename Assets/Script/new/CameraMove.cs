@@ -6,17 +6,20 @@ public class CameraMove : MonoBehaviour
 {
 
     public GameObject player;
-    private Vector3 pos = new Vector3(0, 10, -10);
+    public float pLearp = .02f;
+    public float rLearp = .01f;
+
+    public Vector3 distance = new Vector3(0, 0, 0);
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.gameObject.transform.position = player.transform.position + pos;
+        transform.position = player.transform.position + distance;
+        transform.rotation = Quaternion.Lerp(transform.rotation, player.transform.rotation, rLearp);
     }
 }

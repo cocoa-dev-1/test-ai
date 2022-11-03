@@ -20,16 +20,16 @@ public class AniController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        bool moved = false;
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-        {
-            moved = true;
-        }
+        // bool moved = false;
+        // if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        // {
+        //     moved = true;
+        // }
 
-        if (moved != moving)
-        {
-            moving = moved;
-            anim.SetBool("move", moving);
-        }
+        // if (moved != moving)
+        // {
+        //     moving = moved;
+        //     anim.SetBool("move", moving);
+        // }
     }
 }
