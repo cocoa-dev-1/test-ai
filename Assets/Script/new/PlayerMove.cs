@@ -46,11 +46,10 @@ public class PlayerMove : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        Debug.Log("x " + xRotation);
-        Debug.Log("y " + yRotation);
 
         transform.Translate(dir * speed * Time.deltaTime);
         camTarget.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+        transform.rotation = Quaternion.Euler(0, yRotation, 0);
 
         SetAnimation();
     }
